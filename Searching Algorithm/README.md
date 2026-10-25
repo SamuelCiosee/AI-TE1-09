@@ -2,53 +2,51 @@
 
 Searching Algorithm (Algoritma Pencarian) adalah kumpulan metode untuk menemukan jalur dari titik awal menuju tujuan. Proyek ini menampilkan proses pencarian jalur pada labirin acak secara visual, sehingga cara kerja setiap algoritma dapat diamati dan dibandingkan.
 
-Labirin dibuat secara acak menggunakan metode recursive backtracker. Titik awal berada di kiri atas dan titik tujuan di kanan bawah. Tersedia tiga algoritma pencarian:
+Tersedia tiga algoritma:
 
-1. **Depth-First Search (DFS)** menelusuri satu cabang sedalam mungkin sebelum mencoba cabang lain.
-2. **Breadth-First Search (BFS)** menelusuri labirin lapis demi lapis menggunakan antrean. Karena setiap langkah memiliki biaya yang sama, BFS menemukan jalur dengan jumlah langkah paling sedikit.
-3. **A\*** memprioritaskan sel berdasarkan jarak yang sudah ditempuh dan estimasi jarak ke tujuan menggunakan heuristik Manhattan.
+1. **A_star** memilih langkah berdasarkan jarak yang sudah ditempuh dan estimasi jarak ke tujuan menggunakan heuristik Manhattan.
+2. **Breadth-First Search (BFS)** menelusuri selangkah demi selangkah dari titik awal. Pada labirin ini, BFS menemukan jalur dengan jumlah langkah paling sedikit.
+3. **Depth-First Search (DFS)** menelusuri satu cabang sedalam mungkin sebelum mencoba cabang lain.
+
+Setiap program membuat labirin acak dan menampilkan animasi pencarian dari titik awal ke tujuan.
 
 # Requirement
 
 1. Python 3
-2. Tkinter, yang biasanya sudah termasuk dalam instalasi Python. Pastikan instalasi Python yang digunakan mendukung Tk.
-
-Program hanya menggunakan library bawaan Python, sehingga tidak memerlukan instalasi library eksternal. Pada Linux, Tkinter mungkin perlu dipasang terpisah melalui package manager sistem operasi.
+2. Tkinter 
 
 # How To use
 
 1. Buka terminal di folder `Searching Algorithm`.
-2. Jalankan salah satu visualisasi berikut:
+2. Jalankan salah satu program berikut:
 
    ```bash
    python DFS.py
    ```
 
    ```bash
-   python A_star.py
-   ```
-
-   ```bash
    python BFS.py
    ```
 
-3. Atur ukuran labirin melalui slider **Maze Size (N × N)**. Ukuran awal adalah 40 × 40; nilai yang tersedia adalah bilangan genap dari 2 hingga 200.
-4. Atur kecepatan animasi melalui slider **Animation Speed** (1–100).
-5. Klik **Solve (DFS)**, **Solve (BFS)**, atau **Solve (A*)** untuk membuat labirin acak dan menjalankan algoritma terkait.
-6. Gunakan **Pause** atau **Resume** untuk menjeda atau melanjutkan animasi. Klik **Stop/Reset** untuk menghentikan pencarian dan membersihkan tampilan eksplorasi.
+   ```bash
+   python A_star.py
+   ```
+
+3. Atur ukuran labirin dan kecepatan animasi melalui slider. Ukuran awal adalah 40 × 40; ukuran labirin dibatasi dari 2 hingga 200 sel per sisi.
+4. Klik **Solve** untuk membuat labirin acak dan menjalankan algoritma yang dipilih.
+5. Gunakan **Pause** untuk menjeda atau melanjutkan animasi, dan **Stop/Reset** untuk menghentikan atau mengatur ulang tampilan.
 
 # Running/Result
 
-Jendela visualisasi menampilkan labirin, titik awal, titik tujuan, dan proses penelusuran. Warna sel pada animasi:
+Berikut adalah hasil visualisasi dari setiap algoritma:
+### A star
 
-- Biru muda: sel yang menunggu untuk dieksplorasi.
-- Abu-abu: sel yang sudah dieksplorasi.
-- Oranye: sel yang sedang diperiksa.
-- Ungu: persimpangan atau cabang labirin.
-- Merah: jalur akhir dari titik awal ke tujuan.
+![Hasil visualisasi algoritma A*](Screenshots/A.star.png)
 
-Setelah pencarian selesai, aplikasi menampilkan jumlah langkah pada jalur, jumlah ekspansi, waktu pencarian, dan status penyelesaian. DFS tidak selalu menemukan jalur terpendek, sedangkan BFS dan A* menggunakan pendekatan yang menjamin jalur terpendek untuk labirin ini.
+### BFS
 
-![Tampilan Maze Solver Visualizer](https://github.com/user-attachments/assets/3fdc6352-4e60-4142-a760-752c9d122ca7)
+![Hasil visualisasi algoritma BFS](Screenshots/BFS.png)
 
-Jalankan `DFS.py`, `BFS.py`, dan `A_star.py` secara terpisah untuk membandingkan urutan eksplorasi dan jalur yang ditemukan oleh masing-masing algoritma.
+### DFS
+
+![Hasil visualisasi algoritma DFS](Screenshots/DFS.png)
