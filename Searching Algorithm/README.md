@@ -1,80 +1,54 @@
-# Pathfinder-Visualization
-## Maze Solver Visualizer — A*, BFS, DFS (Tkinter)
-A small learning‑oriented maze pathfinding visualizer written in Python + Tkinter. It shows how A*, BFS, and DFS explore the maze over time so you can compare their routes and performance.
+# Introduction
 
-<img width="912" height="940" alt="Screenshot 2025-09-07 at 21 43 13" src="https://github.com/user-attachments/assets/3fdc6352-4e60-4142-a760-752c9d122ca7" />
+Searching Algorithm (Algoritma Pencarian) adalah kumpulan metode untuk menemukan jalur dari titik awal menuju tujuan. Proyek ini menampilkan proses pencarian jalur pada labirin acak secara visual, sehingga cara kerja setiap algoritma dapat diamati dan dibandingkan.
 
+Labirin dibuat secara acak menggunakan metode recursive backtracker. Titik awal berada di kiri atas dan titik tujuan di kanan bawah. Tersedia tiga algoritma pencarian:
 
-### Goals
-- Introduce A*, BFS, and DFS with clear visuals.
-- Provide an interactive tool for students/teachers/curious learners.
-- Show how algorithm choice affects speed and path quality.
+1. **Depth-First Search (DFS)** menelusuri satu cabang sedalam mungkin sebelum mencoba cabang lain.
+2. **Breadth-First Search (BFS)** menelusuri labirin lapis demi lapis menggunakan antrean. Karena setiap langkah memiliki biaya yang sama, BFS menemukan jalur dengan jumlah langkah paling sedikit.
+3. **A\*** memprioritaskan sel berdasarkan jarak yang sudah ditempuh dan estimasi jarak ke tujuan menggunakan heuristik Manhattan.
 
-### Key Features
-- Random maze generation (up to 200×200) via recursive backtracker.
-- Step‑by‑step exploration visuals:
-  - Open/frontier (light blue), Closed/visited (darker gray), Current (orange), Intersection/branch (purple), Final path (red).
-- Animation controls: Solve, Pause/Resume, Stop/Reset.
-- Maze size and animation speed sliders.
-- Metrics: Steps (path length) and Time (ms), plus expansions count.
+# Requirement
 
-### Files in the repo
-- `A_star.py` — A* visualizer.
-- `BFS.py` — BFS visualizer (FIFO queue).
-- `DFS.py` — DFS visualizer (stack). The file name intentionally has an underscore.
+1. Python 3
+2. Tkinter, yang biasanya sudah termasuk dalam instalasi Python. Pastikan instalasi Python yang digunakan mendukung Tk.
 
-### How to Run
-Requirements:
-- Python 3.8+ (Windows/macOS/Linux).
-- Tkinter available (Windows/macOS ship it; on Linux: `sudo apt install python3-tk`).
-- (Optional) “EB Garamond” font for the intended look. Without it, system defaults will be used.
+Program hanya menggunakan library bawaan Python, sehingga tidak memerlukan instalasi library eksternal. Pada Linux, Tkinter mungkin perlu dipasang terpisah melalui package manager sistem operasi.
 
-Quick start:
-1. Open a terminal in the project folder.
-2. Run any visualizer:
-   - A*: `python A_star.py`
-   - BFS: `python BFS.py`
-   - DFS: `python DFS.py`
+# How To use
 
-If `python` isn’t found, try `python3`.
+1. Buka terminal di folder `Searching Algorithm`.
+2. Jalankan salah satu visualisasi berikut:
 
-### App Controls
-- `Maze Size (N × N)`: maze dimension. Even values only, 2–200.
-- `Animation Speed`: speed of steps. Left side is slow and smooth; right side increases exponentially to very fast.
-- `Solve (…​)`: start the animation for the selected algorithm.
-- `Pause` / `Resume`: pause and resume the animation.
-- `Stop/Reset`: stop the animation and clear overlays.
+   ```bash
+   python DFS.py
+   ```
 
-### Tips
-- Sizes 40–80 are a sweet spot: patterns are visible and still fast.
-- For the speed slider >50, growth is exponential; nudge slowly if you still want to watch the process.
-- The “branch” (purple) highlight marks cells with ≥3 exits; helpful to reason about intersections.
+   ```bash
+   python A_star.py
+   ```
 
-### Algorithm Notes (Deeper Context)
-The maze is modeled as an unweighted grid graph. Two cells are neighbors if there is no wall between them. Start is top‑left, goal is bottom‑right.
+   ```bash
+   python BFS.py
+   ```
 
-1) BFS (Breadth‑First Search)
-- Strategy: layer‑by‑layer expansion using a FIFO queue.
-- Properties: finds shortest paths in unweighted graphs (optimal), complete.
-- Complexity: time O(V+E), space O(V). On dense grids both can be large.
-- Visual signature: expanding “wavefront”; the returned path is shortest by hop count.
+3. Atur ukuran labirin melalui slider **Maze Size (N × N)**. Ukuran awal adalah 40 × 40; nilai yang tersedia adalah bilangan genap dari 2 hingga 200.
+4. Atur kecepatan animasi melalui slider **Animation Speed** (1–100).
+5. Klik **Solve (DFS)**, **Solve (BFS)**, atau **Solve (A*)** untuk membuat labirin acak dan menjalankan algoritma terkait.
+6. Gunakan **Pause** atau **Resume** untuk menjeda atau melanjutkan animasi. Klik **Stop/Reset** untuk menghentikan pencarian dan membersihkan tampilan eksplorasi.
 
-2) DFS (Depth‑First Search)
-- Strategy: dive as deep as possible using a LIFO stack.
-- Properties: does not guarantee shortest paths, but often finds a path quickly.
-- Complexity: time O(V+E); space up to path depth (O(V) worst‑case) but can be lighter than BFS on wide graphs.
-- Visual signature: long branches with backtracking when hitting dead‑ends.
+# Running/Result
 
-3) A* (A‑Star)
-- Strategy: expand nodes by `f(n) = g(n) + h(n)`.
-  - `g(n)`: cost from start (step count in this maze).
-  - `h(n)`: heuristic to the goal. We use Manhattan distance (|dx| + |dy|), admissible and consistent for 4‑connected grids.
-- Properties: with admissible & consistent `h`, A* is optimal and typically explores far fewer nodes than BFS.
-- Complexity: depends on heuristic quality; can degrade toward BFS when `h` is weak, or be much faster when `h` is informative.
-- Visual signature: the frontier “leans” toward the goal; expansions are selective.
+Jendela visualisasi menampilkan labirin, titik awal, titik tujuan, dan proses penelusuran. Warna sel pada animasi:
 
-Implementation Highlights
-- Data structures: `prev` parent array for path reconstruction, and `open/closed` bookkeeping per algorithm.
-- BFS uses a queue; DFS a stack; A* a min‑heap prioritized by `f`.
-- Visualization colors: open (blue), closed (gray), current (orange), branch (purple), final path (red).
+- Biru muda: sel yang menunggu untuk dieksplorasi.
+- Abu-abu: sel yang sudah dieksplorasi.
+- Oranye: sel yang sedang diperiksa.
+- Ungu: persimpangan atau cabang labirin.
+- Merah: jalur akhir dari titik awal ke tujuan.
 
+Setelah pencarian selesai, aplikasi menampilkan jumlah langkah pada jalur, jumlah ekspansi, waktu pencarian, dan status penyelesaian. DFS tidak selalu menemukan jalur terpendek, sedangkan BFS dan A* menggunakan pendekatan yang menjamin jalur terpendek untuk labirin ini.
+
+![Tampilan Maze Solver Visualizer](https://github.com/user-attachments/assets/3fdc6352-4e60-4142-a760-752c9d122ca7)
+
+Jalankan `DFS.py`, `BFS.py`, dan `A_star.py` secara terpisah untuk membandingkan urutan eksplorasi dan jalur yang ditemukan oleh masing-masing algoritma.
