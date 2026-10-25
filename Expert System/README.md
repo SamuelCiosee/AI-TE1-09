@@ -6,7 +6,13 @@ Expert system yang digunakan merupakan expert system simpel milik Zerfan dengan 
 Sumber Kode : https://github.com/zerfan/Sistem-Pakar-Diagnosa-Penyakit-Kulit-Forward-Chaining
 
 # Requirement
-
+1. Instal library experta
+2. Instal library matplotlib
 
 # How To use
+1. Pastikan library experta dan matplotlib terinstal
+2. Jalankan sistempakar.py
+3. Jawab pertanyaan gejala dengan yes atau no 
+4. Hasil diagnosis akan muncul diakhir dengan kemungkinan penyakit, gambar penyakit, deskripsi penyakit, dan saran pengobatan
+
 # Running/Result
