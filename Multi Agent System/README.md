@@ -40,26 +40,26 @@ Setiap program menunjukkan hasil yang dapat berbeda pada setiap eksekusi karena 
 
 - `agent_20.py` menampilkan grafik posisi akhir dari 20 agen setelah 100 langkah.
 
-  ![Hasil simulasi agent_20.py](screenshots/Agent.20.png)
+  ![Hasil simulasi agent_20.py](Screenshots/Agent.20.png)
 
 - `agent_interaction.py` menampilkan log interaksi di terminal dan grafik posisi agen setelah satu putaran. Setiap agen diproses sekali per putaran, tetapi fungsi geraknya dapat mengubah posisi dua kali karena gerakan acak tambahan.
 
-  ![Hasil simulasi agent_interaction.py](screenshots/Agent.Interaction.png)
+  ![Hasil simulasi agent_interaction.py](Screenshots/Agent.Interaction.png)
 
 - `mesa_model.py` menampilkan posisi 20 agen setelah masing-masing dari tiga langkah simulasi.
 
   **Step 1**
 
-  ![Hasil mesa_model.py pada Step 1](screenshots/Mesa.model.1.png)
+  ![Hasil mesa_model.py pada Step 1](Screenshots/Mesa.model.1.png)
 
   **Step 2**
 
-  ![Hasil mesa_model.py pada Step 2](screenshots/Mesa.model.2.png)
+  ![Hasil mesa_model.py pada Step 2](Screenshots/Mesa.model.2.png)
 
   **Step 3**
 
-  ![Hasil mesa_model.py pada Step 3](screenshots/Mesa.model.3.png)
+  ![Hasil mesa_model.py pada Step 3](Screenshots/Mesa.model.3.png)
 
 - `simple_agent.py` menampilkan ID dan posisi satu agen sebelum dan sesudah bergerak.
 
-  ![Hasil simulasi simple_agent.py](screenshots/Simple.agent.png)
+  ![Hasil simulasi simple_agent.py](Screenshots/Simple.agent.png)
