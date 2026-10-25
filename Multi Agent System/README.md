@@ -1,116 +1,65 @@
-# Multi-Agent Systems with Python and Mesa
+# Introduction
 
-This repository contains laboratory exercises and simulations for learning the fundamentals of Multi-Agent Systems (MAS) using Python and the Mesa framework.
+Multi Agent System (Sistem Multi-Agen) adalah sistem yang terdiri dari beberapa agen yang bergerak atau bertindak secara mandiri dalam suatu lingkungan. Setiap agen dapat mengikuti aturan tertentu, dan pada beberapa simulasi juga dapat berinteraksi dengan agen lain.
 
-## Topics Covered
+Folder ini berisi beberapa contoh simulasi multi-agent menggunakan Python:
 
-- Intelligent agent concepts
-- Single-agent vs multi-agent systems
-- Random movement in 2D environments
-- Multi-agent simulation
-- Agent interaction and collision avoidance
-- Emergent behaviour
-- Agent-based modeling with Mesa
-- Grid environments and schedulers
+- `simple_agent.py`: contoh dasar dengan satu agen yang bergerak secara acak.
+- `agent_20.py`: 20 agen bergerak secara acak selama 100 langkah, kemudian posisi akhirnya ditampilkan dalam grafik.
+- `agent_interaction.py`: 20 agen mendeteksi agen lain dalam jarak tertentu, mencoba menyesuaikan gerakannya, lalu menampilkan posisi agen dalam grafik. Pada kode saat ini, gerakan acak juga dijalankan setelah logika tersebut.
+- `mesa_model.py`: simulasi 20 agen pada grid menggunakan framework Mesa. Agen bergerak ke salah satu sel tetangga dan posisi mereka dicetak untuk tiga langkah simulasi.
 
----
+Sumber Kode : https://github.com/BesircanB/mesa-agent-simulation
 
-# Exercises
+# Requirement
 
-## Exercise 1 — Basic Agent Concept
+1. Python 3.11 atau versi Python yang kompatibel
+2. Instal library yang diperlukan:
+   - matplotlib
+   - mesa
+   - networkx
 
-Conceptual introduction to:
-- intelligent agents
-- multi-agent systems
-- real-world MAS applications
+# How To Use
 
-Topics:
-- autonomy
-- perception
-- decision-making
-- interaction
+1. Buka terminal pada folder `Multi Agent System`.
+2. Pastikan seluruh library sudah terinstal menggunakan perintah pada bagian Requirement.
+3. Jalankan salah satu program sesuai simulasi yang ingin dicoba:
 
----
+   ```powershell
+   python simple_agent.py
+   python agent_20.py
+   python agent_interaction.py
+   python mesa_model.py
+   ```
 
-## Exercise 2 — Creating a Simple Agent
+4. Untuk `agent_20.py` dan `agent_interaction.py`, program menampilkan grafik posisi agen; `agent_interaction.py` juga mencetak informasi deteksi dan gerakan ke terminal. Untuk `simple_agent.py` dan `mesa_model.py`, hasil pergerakan ditampilkan di terminal.
 
-Implemented a basic Python agent class containing:
-- unique ID
-- 2D position
-- random movement behaviour
+# Running/Result
 
-Concepts:
-- object-oriented programming
-- agent state
-- behaviour rules
-- random movement
+Setiap program menunjukkan hasil yang dapat berbeda pada setiap eksekusi karena pergerakan agen menggunakan pilihan acak.
 
----
+- `agent_20.py` menampilkan grafik posisi akhir dari 20 agen setelah 100 langkah.
 
-## Exercise 3 — Multi-Agent Simulation
+  ![Hasil simulasi agent_20.py](screenshots/Agent.20.png)
 
-Extended the single-agent system into a simulation with multiple agents.
+- `agent_interaction.py` menampilkan log interaksi di terminal dan grafik posisi agen setelah satu putaran. Setiap agen diproses sekali per putaran, tetapi fungsi geraknya dapat mengubah posisi dua kali karena gerakan acak tambahan.
 
-Features:
-- 20+ agents
-- random movement
-- 100 simulation steps
-- Matplotlib visualization
+  ![Hasil simulasi agent_interaction.py](screenshots/Agent.Interaction.png)
 
-Concepts:
-- simulation loops
-- time steps
-- 2D environments
-- visualization
+- `mesa_model.py` menampilkan posisi 20 agen setelah masing-masing dari tiga langkah simulasi.
 
----
+  **Step 1**
 
-## Exercise 4 — Agent Interaction
+  ![Hasil mesa_model.py pada Step 1](screenshots/Mesa.model.1.png)
 
-Implemented:
-- nearby agent detection
-- collision avoidance
-- interaction-based movement
+  **Step 2**
 
-Concepts:
-- local interaction rules
-- perception range
-- emergent behaviour
-- collective movement dynamics
+  ![Hasil mesa_model.py pada Step 2](screenshots/Mesa.model.2.png)
 
----
+  **Step 3**
 
-## Exercise 5 — Agent-Based Modeling with Mesa
+  ![Hasil mesa_model.py pada Step 3](screenshots/Mesa.model.3.png)
 
-Implemented a Mesa-based simulation using:
-- `mesa.Agent`
-- `mesa.Model`
-- `mesa.space.MultiGrid`
-- Mesa schedulers
+- `simple_agent.py` menampilkan ID dan posisi satu agen sebelum dan sesudah bergerak.
 
-Features:
-- grid-based movement
-- random activation
-- autonomous agents
-- model abstraction
-
----
-
-
-# Technologies Used
-
-- Python
-- Mesa
-- Matplotlib
-- Random module
-
----
-
-# Installation
-
-## Clone the repository
-
-```bash
-git clone https://github.com/YOUR_USERNAME/multi-agent-systems-mesa.git
-cd multi-agent-systems-mesa
-
+  ![Hasil simulasi simple_agent.py](screenshots/Simple.agent.png)
