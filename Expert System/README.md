@@ -17,4 +17,5 @@ Sumber Kode : https://github.com/zerfan/Sistem-Pakar-Diagnosa-Penyakit-Kulit-For
 
 # Running/Result
 ![Hasil uji coba](Screenshots%20hasil/Screenshots%20hasil%20uji%20coba%201.png)
+
 ![Hasil uji coba](Screenshots%20hasil/Screenshots%20hasil%20uji%20coba%202.png)
