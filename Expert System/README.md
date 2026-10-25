@@ -9,7 +9,7 @@ Sumber Kode : https://github.com/zerfan/Sistem-Pakar-Diagnosa-Penyakit-Kulit-For
 1. Instal library experta
 2. Instal library matplotlib
 
-# How To use
+# How To Use
 1. Pastikan library experta dan matplotlib terinstal
 2. Jalankan sistempakar.py
 3. Jawab pertanyaan gejala dengan yes atau no 
