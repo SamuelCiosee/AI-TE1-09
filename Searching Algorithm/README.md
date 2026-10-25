@@ -10,7 +10,7 @@ Tersedia tiga algoritma:
 
 Setiap program membuat labirin acak dan menampilkan animasi pencarian dari titik awal ke tujuan.
 
-Sumber Kode : https://github.com/ziaihsan/Pathfinder-Visualization?
+Sumber Kode : https://github.com/ziaihsan/Pathfinder-Visualization
 
 # Requirement
 
