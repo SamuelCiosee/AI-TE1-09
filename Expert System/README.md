@@ -16,4 +16,5 @@ Sumber Kode : https://github.com/zerfan/Sistem-Pakar-Diagnosa-Penyakit-Kulit-For
 4. Hasil diagnosis akan muncul diakhir dengan kemungkinan penyakit, gambar penyakit, deskripsi penyakit, dan saran pengobatan
 
 # Running/Result
-![Hasil uji coba](Screenshots%20hasil/Screenshots%20hasil%20uji%20coba.png)
+![Hasil uji coba](Screenshots%20hasil/Screenshots%20hasil%20uji%20coba%201.png)
+![Hasil uji coba](Screenshots%20hasil/Screenshots%20hasil%20uji%20coba%202.png)
