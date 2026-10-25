@@ -10,6 +10,8 @@ Tersedia tiga algoritma:
 
 Setiap program membuat labirin acak dan menampilkan animasi pencarian dari titik awal ke tujuan.
 
+Sumber Kode : https://github.com/ziaihsan/Pathfinder-Visualization?
+
 # Requirement
 
 1. Python 3
@@ -18,20 +20,7 @@ Setiap program membuat labirin acak dan menampilkan animasi pencarian dari titik
 # How To use
 
 1. Buka terminal di folder `Searching Algorithm`.
-2. Jalankan salah satu program berikut:
-
-   ```bash
-   python DFS.py
-   ```
-
-   ```bash
-   python BFS.py
-   ```
-
-   ```bash
-   python A_star.py
-   ```
-
+2. Jalankan salah satu program
 3. Atur ukuran labirin dan kecepatan animasi melalui slider. Ukuran awal adalah 40 × 40; ukuran labirin dibatasi dari 2 hingga 200 sel per sisi.
 4. Klik **Solve** untuk membuat labirin acak dan menjalankan algoritma yang dipilih.
 5. Gunakan **Pause** untuk menjeda atau melanjutkan animasi, dan **Stop/Reset** untuk menghentikan atau mengatur ulang tampilan.
