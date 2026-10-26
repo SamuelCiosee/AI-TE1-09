@@ -1,6 +1,9 @@
 from experta import *
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
 
 diseases_list = []
 diseases_symptoms = []
@@ -10,25 +13,16 @@ d_treatment_map = {}
 
 def preprocess():
 	global diseases_list,diseases_symptoms,symptom_map,d_desc_map,d_treatment_map
-	diseases = open("penyakit.txt")
-	diseases_t = diseases.read()
-	diseases_list = diseases_t.split("\n")
-	diseases.close()
+	diseases_t = (BASE_DIR / "penyakit.txt").read_text(encoding="utf-8")
+	diseases_list = diseases_t.splitlines()
 	for disease in diseases_list:
-		disease_s_file = open("Gejala penyakit/" + disease + ".txt")
-		disease_s_data = disease_s_file.read()
-		s_list = disease_s_data.split("\n")
+		disease_file = disease.lower() + ".txt"
+		disease_s_data = (BASE_DIR / "Gejala penyakit" / disease_file).read_text(encoding="utf-8")
+		s_list = disease_s_data.splitlines()
 		diseases_symptoms.append(s_list)
 		symptom_map[str(s_list)] = disease
-		disease_s_file.close()
-		disease_s_file = open("Deskripsi penyakit/" + disease + ".txt")
-		disease_s_data = disease_s_file.read()
-		d_desc_map[disease] = disease_s_data
-		disease_s_file.close()
-		disease_s_file = open("Obat penyakit/" + disease + ".txt")
-		disease_s_data = disease_s_file.read()
-		d_treatment_map[disease] = disease_s_data
-		disease_s_file.close()
+		d_desc_map[disease] = (BASE_DIR / "Deskripsi Penyakit" / disease_file).read_text(encoding="utf-8")
+		d_treatment_map[disease] = (BASE_DIR / "Obat penyakit" / disease_file).read_text(encoding="utf-8")
 	
 
 def identify_disease(*arguments):
@@ -52,7 +46,7 @@ def if_not_matched(disease):
 		print("")
 		print("Kemungkinan penyakit yang kamu miliki adalah %s\n" %(id_disease))
 
-		plt.imshow(mpimg.imread("./img/" + id_disease + ".jpg"))
+		plt.imshow(mpimg.imread(BASE_DIR / "img" / (id_disease + ".jpg")))
 		plt.title(id_disease)
 		plt.axis('off')
 		plt.show()
