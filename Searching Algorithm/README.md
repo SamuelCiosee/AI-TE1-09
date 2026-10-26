@@ -4,7 +4,7 @@ Searching Algorithm (Algoritma Pencarian) adalah kumpulan metode untuk menemukan
 
 Tersedia tiga algoritma:
 
-1. **A_star** menelusuri dengan menggabungkan jarak yang sudah ditempuh dan tebakan arah terdekat. Pada labirin ini, A* menemukan jalur paling optimal dan efisien dengan cepat.
+1. **A-star** menelusuri dengan menggabungkan jarak yang sudah ditempuh dan tebakan arah terdekat. Pada labirin ini, A* menemukan jalur paling optimal dan efisien dengan cepat.
 2. **Breadth-First Search (BFS)** menelusuri selangkah demi selangkah dari titik awal. Pada labirin ini, BFS menemukan jalur dengan jumlah langkah paling sedikit.
 3. **Depth-First Search (DFS)** menelusuri satu cabang sedalam mungkin sebelum mencoba cabang lain.
 
@@ -27,15 +27,8 @@ Sumber Kode : https://github.com/ziaihsan/Pathfinder-Visualization
 
 # Running/Result
 
-Berikut adalah hasil visualisasi dari setiap algoritma:
-### A star
+Berikut adalah rekaman visualisasi dari setiap algoritma:
 
-![Hasil visualisasi algoritma A*](Screenshots/A.star.png)
-
-### BFS
-
-![Hasil visualisasi algoritma BFS](Screenshots/BFS.png)
-
-### DFS
-
-![Hasil visualisasi algoritma DFS](Screenshots/DFS.png)
+- [Video algoritma A-Star](<Video Capture/A-STAR.mp4>)
+- [Video algoritma BFS](<Video Capture/BFS.mp4>)
+- [Video algoritma DFS](<Video Capture/DFS.mp4>)
