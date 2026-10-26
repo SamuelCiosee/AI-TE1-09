@@ -4,7 +4,7 @@ Searching Algorithm (Algoritma Pencarian) adalah kumpulan metode untuk menemukan
 
 Tersedia tiga algoritma:
 
-1. **A_star** memilih langkah berdasarkan jarak yang sudah ditempuh dan estimasi jarak ke tujuan menggunakan heuristik Manhattan.
+1. **A_star** menelusuri dengan menggabungkan jarak yang sudah ditempuh dan tebakan arah terdekat. Pada labirin ini, A* menemukan jalur paling optimal dan efisien dengan cepat.
 2. **Breadth-First Search (BFS)** menelusuri selangkah demi selangkah dari titik awal. Pada labirin ini, BFS menemukan jalur dengan jumlah langkah paling sedikit.
 3. **Depth-First Search (DFS)** menelusuri satu cabang sedalam mungkin sebelum mencoba cabang lain.
 

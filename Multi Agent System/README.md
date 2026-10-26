@@ -2,18 +2,18 @@
 
 Multi Agent System (Sistem Multi-Agen) adalah sistem yang terdiri dari beberapa agen yang bergerak atau bertindak secara mandiri dalam suatu lingkungan. Setiap agen dapat mengikuti aturan tertentu, dan pada beberapa simulasi juga dapat berinteraksi dengan agen lain.
 
-Folder ini berisi beberapa contoh simulasi multi-agent menggunakan Python:
+Berikut beberapa contoh simulasi multi-agent menggunakan Python:
 
-- `simple_agent.py`: contoh dasar dengan satu agen yang bergerak secara acak.
 - `agent_20.py`: 20 agen bergerak secara acak selama 100 langkah, kemudian posisi akhirnya ditampilkan dalam grafik.
 - `agent_interaction.py`: 20 agen mendeteksi agen lain dalam jarak tertentu, mencoba menyesuaikan gerakannya, lalu menampilkan posisi agen dalam grafik. Pada kode saat ini, gerakan acak juga dijalankan setelah logika tersebut.
 - `mesa_model.py`: simulasi 20 agen pada grid menggunakan framework Mesa. Agen bergerak ke salah satu sel tetangga dan posisi mereka dicetak untuk tiga langkah simulasi.
+- `simple_agent.py`: contoh dasar dengan satu agen yang bergerak secara acak.
 
 Sumber Kode : https://github.com/BesircanB/mesa-agent-simulation
 
 # Requirement
 
-1. Python 3.11 atau versi Python yang kompatibel
+1. Python 3.11 atau versi yang kompatibel
 2. Instal library yang diperlukan:
    - matplotlib
    - mesa
