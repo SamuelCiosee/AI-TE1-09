@@ -29,6 +29,8 @@ Sumber Kode : https://github.com/ziaihsan/Pathfinder-Visualization
 
 Berikut adalah rekaman visualisasi dari setiap algoritma:
 
-- [Video algoritma A-Star](<Video Capture/A-STAR.mp4>)
-- [Video algoritma BFS](<Video Capture/BFS.mp4>)
-- [Video algoritma DFS](<Video Capture/DFS.mp4>)
+[Video algoritma A-Star](<Video Capture/A-STAR.mp4>)
+
+[Video algoritma BFS](<Video Capture/BFS.mp4>)
+
+[Video algoritma DFS](<Video Capture/DFS.mp4>)
